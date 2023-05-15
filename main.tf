@@ -42,7 +42,7 @@ resource "fly_machine" "web" {
   app    = "kandyba-flyiac"
   region = "ams"
   name   = random_pet.name.id
-  image  = "amazonlinux:latest"
+  image  = "amazonlinux:learn-terraform-versions"
   services = [
     {
       ports = [
@@ -62,8 +62,4 @@ resource "fly_machine" "web" {
   cpus       = 1
   memorymb   = 256
   depends_on = [fly_app.exampleApp]
-  cmd = [
-    "yum -y remove httpd",
-    "yum -y remove httpd-tools"
-  ]
 }
