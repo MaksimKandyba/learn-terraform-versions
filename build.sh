@@ -1,1 +1,1 @@
-docker build -t amazonlinux:learn-terraform-versions .
+docker build -t registry.fly.io/amazonlinux:learn-terraform-versions .

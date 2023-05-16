@@ -7,8 +7,8 @@ RUN yum install -y httpd24 php72 mysql57-server php72-mysqlnd
 RUN service httpd start
 RUN chkconfig httpd on
 
-RUN usermod -a -G apache ec2-user
-RUN chown -R ec2-user:apache /var/www
+RUN usermod -a -G apache root
+RUN chown -R root:apache /var/www
 RUN chmod 2775 /var/www
 RUN find /var/www -type d -exec chmod 2775 {} \;
 RUN find /var/www -type f -exec chmod 0664 {} \;
